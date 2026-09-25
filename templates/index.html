@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Text Summarizer</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+        }
+
+        textarea {
+            width: 100%;
+            height: 200px;
+            padding: 10px;
+            margin-top: 10px;
+            box-sizing: border-box;
+        }
+
+        button {
+            margin-top: 15px;
+            padding: 12px 25px;
+            cursor: pointer;
+        }
+
+        .result {
+            margin-top: 25px;
+            padding: 20px;
+            background: #f0f0f0;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>AI Text Summarizer</h1>
+
+    <h3>Student Information</h3>
+
+    <p><strong>Name:</strong> Hassan Mehedi</p>
+    <p><strong>Student ID:</strong> 2026512769</p>
+
+    <hr>
+
+    <h2>AI Summarizer</h2>
+
+    <form method="POST">
+
+        <label>Enter your text:</label>
+
+        <textarea
+            name="text"
+            placeholder="Enter a paragraph here..."
+            required></textarea>
+
+        <br>
+
+        <button type="submit">
+            Summarize with AI
+        </button>
+
+    </form>
+
+    {% if summary %}
+
+    <div class="result">
+
+        <h3>AI Summary</h3>
+
+        <p>{{ summary }}</p>
+
+    </div>
+
+    {% endif %}
+
+</div>
+
+</body>
+</html>
