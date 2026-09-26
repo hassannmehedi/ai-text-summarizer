@@ -15,7 +15,7 @@ def home():
 
         if text:
             response = client.models.generate_content(
-                model="gemini-2.5-flash",
+                model="gemini-3-flash-preview",
                 contents=f"Summarize the following text in simple English:\n\n{text}"
             )
 
